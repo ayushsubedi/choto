@@ -8,6 +8,7 @@ from spacy.lang.en.stop_words import STOP_WORDS
 from string import punctuation
 from collections import Counter
 from heapq import nlargest
+from summarizer import Summarizer
 
 nlp = spacy.load('en_core_web_sm')
 
@@ -52,6 +53,10 @@ def text_summary(algorithm, text, ratio):
     if (algorithm == 'spacy'):
         doc = nlp(text)
         return spacy_summary(doc, ratio)
+    if (algorithm == 'bert'):
+        model = Summarizer()
+        result = model(text, ratio)
+        return ''.join(result)
     # TODO: add different algorithms
     return ' '.join((text.split()[:ratio]))
 
@@ -68,7 +73,7 @@ def text_summary(algorithm, text, ratio):
 @click.option(
     '--algorithm',
     type=click.Choice(
-        ['gensim', 'spacy', 'todo_other2'],
+        ['gensim', 'spacy', 'bert'],
         case_sensitive=False),
     default='gensim',
     help='Algorithm to use')
