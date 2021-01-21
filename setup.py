@@ -7,7 +7,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='term_article_summary',
-    version='1.1.1',
+    version='1.1.2',
     py_modules=['term_article_summary'],
     author='Ayush Subedi',
     author_email='ayush.subedi@gmail.com',
