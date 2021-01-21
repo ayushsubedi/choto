@@ -2,13 +2,9 @@
 
 #### Installation
 
-`pip install term-article-summary`
+`pip install term_article_summary`
 
 ### Source
-
-A CLI tool that summarizes news/articles. 
-
-[![asciicast](https://asciinema.org/a/gTgnbAKLweXtwcefoniU96Isn.svg)](https://asciinema.org/a/gTgnbAKLweXtwcefoniU96Isn)
 
 ### Installation
 
