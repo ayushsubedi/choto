@@ -75,7 +75,7 @@ def text_summary(algorithm, text, ratio):
         case_sensitive=False),
     default='gensim',
     help='Algorithm to use')
-def get_content(url, ratio, algorithm):
+def cli(url, ratio, algorithm):
     try:
         if not url.startswith('http'):
             url = 'http://'+url
@@ -91,7 +91,3 @@ def get_content(url, ratio, algorithm):
             algorithm=algorithm,
             text=article.text,
             ratio=ratio))
-
-
-if __name__ == '__main__':
-    get_content()
