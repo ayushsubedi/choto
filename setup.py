@@ -1,13 +1,19 @@
 from setuptools import setup
+from os import path
+
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
     name='term_article_summary',
-    version='1.0.0',
+    version='1.1.1',
     py_modules=['term_article_summary'],
     author='Ayush Subedi',
     author_email='ayush.subedi@gmail.com',
     description='A CLI tool that summarizes news and articles.',
-    long_description=open('README.md').read(),
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     url='https://github.com/ayushsubedi/term-article-summary',
     python_requires='>=3.6, <3.9',
     install_requires=[
@@ -16,8 +22,7 @@ setup(
         'newspaper3k',
         'numpy==1.19.5',
         'gensim',
-        'spacy==2.2.0',
-        'en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.0/en_core_web_sm-2.2.0.tar.gz',
+        'spacy==2.2.0'
     ],
     entry_points='''
         [console_scripts]

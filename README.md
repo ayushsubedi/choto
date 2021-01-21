@@ -2,7 +2,7 @@
 
 #### Installation
 
-`pip install term_article_summary`
+`pip install term-article-summary`
 
 ### Source
 

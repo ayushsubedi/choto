@@ -10,7 +10,13 @@ from collections import Counter
 from heapq import nlargest
 from summarizer import Summarizer
 
-nlp = spacy.load('en_core_web_sm')
+
+try:
+    nlp = spacy.load('en')
+except OSError:
+    from spacy.cli import download
+    download('en')
+    nlp = spacy.load('en')
 
 
 def spacy_summary(doc, ratio):
