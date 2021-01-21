@@ -66,7 +66,7 @@ def text_summary(algorithm, text, ratio):
     help='Enter a valid URL')
 @click.option(
     '--ratio',
-    default=0.5,
+    default=0.3,
     help='Ratio to summarize to.')
 @click.option(
     '--algorithm',
