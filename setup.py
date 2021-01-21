@@ -1,9 +1,9 @@
 from setuptools import setup
 
 setup(
-    name='summarize',
+    name='term_article_summary',
     version='1.0',
-    py_modules=['summarize'],
+    py_modules=['term_article_summary'],
     author='Ayush Subedi',
     install_requires=[
         'Click',
@@ -16,6 +16,6 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        summarize=summarize:cli
+        term_article_summary=term_article_summary:cli
     ''',
 )
