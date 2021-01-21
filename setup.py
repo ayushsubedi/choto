@@ -2,11 +2,12 @@ from setuptools import setup
 
 setup(
     name='term_article_summary',
-    version='1.0.1',
+    version='1.0.0',
     py_modules=['term_article_summary'],
     author='Ayush Subedi',
     author_email='ayush.subedi@gmail.com',
     description='A CLI tool that summarizes news and articles.',
+    long_description=open('README.md').read(),
     url='https://github.com/ayushsubedi/term-article-summary',
     python_requires='>=3.6, <3.9',
     install_requires=[
