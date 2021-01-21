@@ -5,6 +5,14 @@ from requests.exceptions import ConnectionError
 from gensim.summarization import summarize
 
 
+def text_summary(algorithm, text, words):
+    print(algorithm)
+    if (algorithm == 'gensim'):
+        return summarize(text=text, word_count=words)
+    # TODO: add different algorithms
+    return ' '.join((text.split()[:words]))
+
+
 @click.command()
 @click.option(
     '--url',
@@ -14,7 +22,14 @@ from gensim.summarization import summarize
     '--words',
     default=100,
     help='Number of words to summarize to.')
-def get_content(url, words):
+@click.option(
+    '--algorithm',
+    type=click.Choice(
+        ['gensim', 'todo_other1', 'todo_other2'],
+        case_sensitive=False),
+    default='gensim',
+    help='Algorithm to use')
+def get_content(url, words, algorithm):
     try:
         if not url.startswith('http'):
             url = 'http://'+url
@@ -26,7 +41,10 @@ def get_content(url, words):
         article = Article(url, keep_article_html=False)
         article.download()
         article.parse()
-        click.echo(summarize(text=article.text, word_count=words))
+        click.echo(text_summary(
+            algorithm=algorithm,
+            text=article.text,
+            words=words))
 
 
 if __name__ == '__main__':
