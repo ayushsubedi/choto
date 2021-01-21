@@ -1,5 +1,11 @@
 ### Term Article Summary
 
+#### Installation
+
+`pip install term-article-summary`
+
+### Source
+
 A CLI tool that summarizes news/articles. 
 
 [![asciicast](https://asciinema.org/a/gTgnbAKLweXtwcefoniU96Isn.svg)](https://asciinema.org/a/gTgnbAKLweXtwcefoniU96Isn)
@@ -24,9 +30,9 @@ A CLI tool that summarizes news/articles.
 
 ### Run the app
 
-`python app.py --url=https://abc.xyz --ratio=0.5 --algorithm=bert`
+`python term_article_summary.py --url=https://abc.xyz --ratio=0.5 --algorithm=bert`
 
-Usage: app.py [OPTIONS]
+Usage: term_article_summary.py [OPTIONS]
 
 ```
 Options:
