@@ -2,11 +2,7 @@ import requests
 import click
 from newspaper import Article
 from requests.exceptions import ConnectionError
-
-
-def summarize(article_text, words):
-    # TODO: add summarizer
-    return article_text[:words]
+from gensim.summarization import summarize
 
 
 @click.command()
@@ -16,7 +12,7 @@ def summarize(article_text, words):
     help='Enter a valid URL')
 @click.option(
     '--words',
-    default=150,
+    default=100,
     help='Number of words to summarize to.')
 def get_content(url, words):
     try:
@@ -30,7 +26,7 @@ def get_content(url, words):
         article = Article(url, keep_article_html=False)
         article.download()
         article.parse()
-        click.echo(summarize(article.text, words))
+        click.echo(summarize(text=article.text, word_count=words))
 
 
 if __name__ == '__main__':
