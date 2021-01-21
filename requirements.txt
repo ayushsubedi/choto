@@ -65,7 +65,7 @@ sgmllib3k==1.0.0
 six==1.15.0
 smart-open==4.1.2
 soupsieve==2.1
-spacy==2.3.5
+spacy==2.2.0
 srsly==1.0.5
 tensorboard==2.4.1
 tensorboard-plugin-wit==1.8.0
