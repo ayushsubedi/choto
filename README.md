@@ -32,9 +32,8 @@ Usage: term_article_summary.py [OPTIONS]
 
 ```
 Options:
-  --url TEXT                      Enter a valid URL
-  --ratio FLOAT                   Ratio to summarize to.
-  --algorithm [gensim|spacy|bert]
-                                  Algorithm to use
-  --help                          Show this message and exit.
+--url TEXT                      Enter a valid URL
+--ratio FLOAT                   Ratio to summarize to.
+--algorithm [gensim|spacy|bert] Algorithm to use
+--help                          Show this message and exit.
 ```
