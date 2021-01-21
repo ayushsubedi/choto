@@ -57,8 +57,6 @@ def text_summary(algorithm, text, ratio):
         model = Summarizer()
         result = model(text, ratio)
         return ''.join(result)
-    # TODO: add different algorithms
-    return ' '.join((text.split()[:ratio]))
 
 
 @click.command()
