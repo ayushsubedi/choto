@@ -4,9 +4,10 @@
 
 `pip install choto`
 
-### Source
+[![asciicast](https://asciinema.org/a/r203CswsNWHaThJmHLKgpVl60.svg)](https://asciinema.org/a/r203CswsNWHaThJmHLKgpVl60)
 
-### Installation
+
+### Installation (from source)
 
 #### Clone the repository
 
