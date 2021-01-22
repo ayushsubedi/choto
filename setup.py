@@ -7,7 +7,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='choto',
-    version='1.0.2',
+    version='1.0.3',
     py_modules=['choto'],
     author='Ayush Subedi',
     author_email='ayush.subedi@gmail.com',
@@ -23,7 +23,8 @@ setup(
         'numpy==1.19.5',
         'gensim',
         'spacy==2.2.0',
-        'summarizer'
+        'bert-extractive-summarizer',
+        'torch'
     ],
     entry_points='''
         [console_scripts]

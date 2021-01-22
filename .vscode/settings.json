@@ -2,5 +2,5 @@
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
-    "python.pythonPath": "/Users/ayush/Desktop/personal/term-article-summary/env/bin/python3"
+    "python.pythonPath": "/Users/ayush/.pyenv/versions/3.7.9/bin/python"
 }
