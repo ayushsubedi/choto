@@ -2,7 +2,7 @@
 
 #### Installation
 
-`pip install term_article_summary`
+`pip install choto`
 
 ### Source
 
@@ -10,7 +10,7 @@
 
 #### Clone the repository
 
-`git clone https://github.com/ayushsubedi/term_article_summary`
+`git clone https://github.com/ayushsubedi/choto`
 
 #### CD into the cloned directory and create a virtualenv
 
@@ -26,9 +26,9 @@
 
 ### Run the app
 
-`python term_article_summary.py --url=https://abc.xyz --ratio=0.5 --algorithm=bert`
+`python choto.py --url=https://abc.xyz --ratio=0.5 --algorithm=bert`
 
-Usage: term_article_summary.py [OPTIONS]
+Usage: choto.py [OPTIONS]
 
 ```
 Options:
