@@ -2,7 +2,7 @@
 
 #### Installation
 
-`pip install term-article-summary`
+`pip install term_article_summary`
 
 ### Source
 
@@ -10,7 +10,7 @@
 
 #### Clone the repository
 
-`git clone https://github.com/ayushsubedi/term-article-summary`
+`git clone https://github.com/ayushsubedi/term_article_summary`
 
 #### CD into the cloned directory and create a virtualenv
 
