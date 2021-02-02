@@ -20,6 +20,13 @@ except OSError:
 
 
 def spacy_summary(doc, ratio):
+    ''' Generate summary using spacy
+    Args:
+        doc: text to summarize
+        ratio: ratio of the original text to summarize into
+    Returns:
+        summarized text using spacy
+    '''
     total_sentence = len(list(doc.sents))
     summary_len = int(total_sentence * ratio)
     keyword = []
@@ -54,6 +61,14 @@ def spacy_summary(doc, ratio):
 
 
 def text_summary(algorithm, text, ratio):
+    ''' Generate summary using one of the three implemented
+    algorithm
+    Args:
+        text: text to summarize
+        ratio: ratio of the original text to summarize into
+    Returns:
+        summarized text using input algorithm
+    '''
     if (algorithm == 'gensim'):
         return summarize(text=text, ratio=ratio)
     if (algorithm == 'spacy'):
